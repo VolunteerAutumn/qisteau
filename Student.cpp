@@ -35,13 +35,15 @@ class Aspirant : public Student
 {
 private:
 	string topicOfResearch;
+	int pageAmount;
 public:
 	Aspirant() : topicOfResearch(""), Student() {}
-	Aspirant(string n, date b, int a, int y, int g, string t) : Student(n, b, a, y, g), topicOfResearch(t) {}
+	Aspirant(string n, date b, int a, int y, int g, string t, int pa) : Student(n, b, a, y, g), topicOfResearch(t), pageAmount(pa) {}
 	void printInfo()
 	{
 		Student::printInfo();
 		cout << "Topic of Research: " << topicOfResearch << endl;
+		cout << "They had printed " << pageAmount << " pages." << endl;
 	}
 };
 
@@ -51,7 +53,7 @@ int main()
 	Student s1("John Doe", d1, 24, 3, 85);
 
 	date d2(5, 20, 1995);
-	Aspirant a1("Jane Smith", d2, 29, 5, 90, "Game Development Evolution");
+	Aspirant a1("Jane Smith", d2, 29, 5, 90, "Game Development Evolution", 208);
 
 	s1.printInfo();
 	cout << endl;
