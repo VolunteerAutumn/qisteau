@@ -45,6 +45,10 @@ public:
 		cout << "Topic of Research: " << topicOfResearch << endl;
 		cout << "They had printed " << pageAmount << " pages." << endl;
 	}
+	void AddPages(int am)
+	{
+		this->pageAmount += am;
+	}
 };
 
 int main()
@@ -57,5 +61,7 @@ int main()
 
 	s1.printInfo();
 	cout << endl;
+	a1.printInfo();
+	a1.AddPages(10);
 	a1.printInfo();
 }
